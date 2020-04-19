@@ -1,9 +1,11 @@
 import React from 'react';
 
-import { HomePage } from './homePage/HomePage';
+import { Root } from './Root';
 
 export const App = function () {
   return (
-      <HomePage/>
+    <React.StrictMode>
+      <Root/>
+    </React.StrictMode> 
   );
 }
