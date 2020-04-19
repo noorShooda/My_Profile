@@ -1,10 +1,12 @@
 import React from 'react';
 
+import './homePage.css';
+
 class HomePage extends React.Component{
 
     render(){
         return(
-            <p>Hello react</p>
+            <p className="homePageStyle">Hello react</p>
         );
     }
 }
