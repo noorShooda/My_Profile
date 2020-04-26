@@ -1,0 +1,24 @@
+.headerItemStyle{
+    margin-left: 25px;
+    padding-left: 3px;
+    margin-top: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.listStyle{
+    list-style: none;
+    padding-left: 0px;
+}
+.listItemStyle{
+    border-bottom: solid 0.5px grey ;
+    padding: 10px; 
+    font-size: 15px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.headerItemStyle:hover{
+    background-color:lavender;
+    color: black;
+}
+.headerItemStyle:visited{
+    color: white;
+}
