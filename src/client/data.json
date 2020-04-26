@@ -4,32 +4,32 @@
             "language":"java",
             "numberOfProject": 2,
             "duration": {
-                "from":"15/09/2016",
-                "to": "30/05/2018"
+                "from":"1473372000000",
+                "to": "1525471200000"
             }
         },
             {
             "language":"C++",
             "numberOfProject": 1,
             "duration": {
-                "from":"15/09/2016",
-                "to": "30/05/2017"
+                "from":"1483372000000",
+                "to": "1526471200000"
             }
         },
             {
             "language":"PHP",
             "numberOfProject": 2,
             "duration": {
-                "from":"15/09/2017",
-                "to": "30/05/2019"
+                "from":"1483372000000",
+                "to": "1483892000000"
             }
         },
             {
             "language":"C",
             "numberOfProject": 2,
             "duration": {
-                "from":"15/09/2016",
-                "to": "30/05/2018"
+                "from":"1526201200000",
+                "to": "1526480200000"
             }
         }
     ]
