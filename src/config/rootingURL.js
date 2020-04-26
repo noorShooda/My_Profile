@@ -1,4 +1,5 @@
 export const rootingURL={
     home : "/",
-    contact:"/contact"
+    contact:"/contact",
+    portfolio:"/portfolio"
 }
