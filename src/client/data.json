@@ -1,0 +1,36 @@
+{
+    "languagePortfolio":[
+        {
+            "language":"java",
+            "numberOfProject": 2,
+            "duration": {
+                "from":"15/09/2016",
+                "to": "30/05/2018"
+            }
+        },
+            {
+            "language":"C++",
+            "numberOfProject": 1,
+            "duration": {
+                "from":"15/09/2016",
+                "to": "30/05/2017"
+            }
+        },
+            {
+            "language":"PHP",
+            "numberOfProject": 2,
+            "duration": {
+                "from":"15/09/2017",
+                "to": "30/05/2019"
+            }
+        },
+            {
+            "language":"C",
+            "numberOfProject": 2,
+            "duration": {
+                "from":"15/09/2016",
+                "to": "30/05/2018"
+            }
+        }
+    ]
+}
