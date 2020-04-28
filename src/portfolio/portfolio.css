@@ -3,4 +3,15 @@
     top:0px;
     bottom:0px;
     left:300px;
+
+    width: 315px;
+}
+
+.pageHeader {
+    font-size: 16px;
+    color: red;
+    font-family: 'Courier New', Courier, monospace;
+    
+    background: aqua;
+    border: 1px dotted black;
 }
