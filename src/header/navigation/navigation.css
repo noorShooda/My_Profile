@@ -13,7 +13,7 @@
     border-bottom: solid 0.5px grey ;
     padding: 10px; 
     font-size: 15px;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: sans-serif;
 }
 .headerItemStyle:hover{
     background-color:lavender;
