@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import './portfolio.css';
 import { ListDisplayer } from './listDisplayer/ListDisplayer';
 import { getLanguagePortfolio, getPortfolioTools } from '../client/client';
-import { getPortfolioLanguage, getPortfolioLanguageFail} from './actions';
+import { getPortfolioLanguage, getPortfolioLanguageFail } from './actions';
 
 class Portfolio extends React.Component{
 
@@ -13,16 +13,20 @@ class Portfolio extends React.Component{
     componentDidMount(){
         getLanguagePortfolio()
         .then(
-            (response)=>{this.props.getPortfolioLaguage(response)},
-            ()=>{
+            (response) => {
+                this.props.getPortfolioLaguage(response);
+            },
+            () => {
                 this.props.getPortfolioLanguageFail(true);
             }
         );
 
         getPortfolioTools()
         .then(
-            (response)=>{this.setState({portfolioTools: response});},
-            ()=>{
+            (response) => {
+                this.setState({portfolioTools: response});
+            },
+            () => {
                 this.setState({portfolioToolsIsError:true});
             }
         );
@@ -35,19 +39,22 @@ class Portfolio extends React.Component{
             <ListDisplayer languagePortfolio={this.props.portfolioLanguage}/>
             <p>{this.state.portfolioTools.join('-')}</p>
             </div>
-        )
+        );
     }
 }
-const mapActionToProps={
+
+const mapActionToProps = {
     getPortfolioLaguage:getPortfolioLanguage,
     getPortfolioLanguageFail:getPortfolioLanguageFail
-}
-const mapStateToProps=(state)=>{
+};
+
+const mapStateToProps = (state) => {
     return(
         {
             portfolioLanguage: state.portfolioState.languagePortfolio,
             portfolioLanguageIsError: state.portfolioState.languagePortfolioIsError
         }
-    )
-}
-export default connect(mapStateToProps,mapActionToProps)(Portfolio) ;
+    );
+};
+
+export default connect(mapStateToProps,mapActionToProps)(Portfolio);
