@@ -1,5 +1,16 @@
 .itemStyle{
-    border: black 2px solid;
+    padding-left: 10px;
     margin-top: 10px;
+
     width: 300px;
+
+    border: black 2px solid;
+    background: #0CCB52;
+}
+
+.subtitle {
+    font-weight: 600;
+    font-style: italic;
+    font-family: sans-serif;
+    color: #D2DED6;
 }
