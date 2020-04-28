@@ -5,6 +5,7 @@ import './portfolio.css';
 import { ListDisplayer } from './listDisplayer/ListDisplayer';
 import { getLanguagePortfolio, getPortfolioTools } from '../client/client';
 import { getPortfolioLanguage, getPortfolioLanguageFail } from './actions';
+import { ErrorHandler } from '../errorHandler/ErrorHandler';
 
 class Portfolio extends React.Component{
 
@@ -31,13 +32,31 @@ class Portfolio extends React.Component{
             }
         );
     }
+    
+    displayPortfolioLanguages() {
+        if (this.props.portfolioLanguageIsError){
+           return <ErrorHandler error="There was an error in the get portfolio languages !"/>;
+        }
+        else {
+            return <ListDisplayer languagePortfolio={this.props.portfolioLanguage}/>;
+        }
+    }
+
+    displayPortfolioTools() {
+        if (this.state.portfolioToolsIsError){
+            return <ErrorHandler error="There was an error in the get portfolio Tools !"/>; 
+        }
+        else {
+            return <p>{this.state.portfolioTools.join('-')}</p>;
+        }
+    }
    
     render(){
         return(
             <div className="portfolioStyle">
-            <p className="pageHeader">Hello Portfolio</p>
-            <ListDisplayer languagePortfolio={this.props.portfolioLanguage}/>
-            <p>{this.state.portfolioTools.join('-')}</p>
+                <p className="pageHeader">Hello Portfolio</p>
+                {this.displayPortfolioLanguages()}
+                {this.displayPortfolioTools()}
             </div>
         );
     }
