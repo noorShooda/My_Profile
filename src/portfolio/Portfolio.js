@@ -35,19 +35,19 @@ class Portfolio extends React.Component{
     
     displayPortfolioLanguages() {
         if (this.props.portfolioLanguageIsError){
-           return (<ErrorHandler error="There was an error in the get portfolio languages !"/>);
+           return <ErrorHandler error="There was an error in the get portfolio languages !"/>;
         }
         else {
-            return(<ListDisplayer languagePortfolio={this.props.portfolioLanguage}/>);
+            return <ListDisplayer languagePortfolio={this.props.portfolioLanguage}/>;
         }
     }
 
     displayPortfolioTools() {
         if (this.state.portfolioToolsIsError){
-            return (<ErrorHandler error="There was an error in the get portfolio Tools !"/>); 
+            return <ErrorHandler error="There was an error in the get portfolio Tools !"/>; 
         }
         else {
-            return(<p>{this.state.portfolioTools.join('-')}</p>);
+            return <p>{this.state.portfolioTools.join('-')}</p>;
         }
     }
    
