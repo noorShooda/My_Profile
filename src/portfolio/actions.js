@@ -1,11 +1,11 @@
 export const GET_LANGUAGE ="getPortfolioLanguage";
 export const GET_LANGUAGE_FAIL="getPortfolioLanguageFail";
+export const GET_LANGUAGE_SUC="getPortfolioLanguageSuccess";
 
-export const getPortfolioLanguage = (portfolioLanguages) => {
+export const getPortfolioLanguage = () => {
     return(
         {
             type : GET_LANGUAGE,
-            payload: portfolioLanguages
         }
     );
 };
@@ -15,6 +15,15 @@ export const getPortfolioLanguageFail = (error) => {
         {
             type: GET_LANGUAGE_FAIL,
             payload: error    
+        }
+    );
+};
+
+export const getPortfolioLanguageSuccess = (data) => {
+    return(
+        {
+            type: GET_LANGUAGE_SUC,
+            payload: data   
         }
     );
 };
