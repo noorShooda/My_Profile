@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 import './portfolio.css';
 import { ListDisplayer } from './listDisplayer/ListDisplayer';
-import { getLanguagePortfolio, getPortfolioTools } from '../client/client';
+import { getPortfolioTools } from '../client/client';
 import { getPortfolioLanguage, getPortfolioLanguageFail } from './actions';
 import { ErrorHandler } from '../errorHandler/ErrorHandler';
 
@@ -12,15 +12,7 @@ class Portfolio extends React.Component{
     state={portfolioTools:[], portfolioToolsIsError:false};
 
     componentDidMount(){
-        getLanguagePortfolio()
-        .then(
-            (response) => {
-                this.props.getPortfolioLaguage(response);
-            },
-            () => {
-                this.props.getPortfolioLanguageFail(true);
-            }
-        );
+        this.props.getPortfolioLaguage();
 
         getPortfolioTools()
         .then(
