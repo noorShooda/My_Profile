@@ -1,13 +1,14 @@
-import { GET_LANGUAGE_SUC, GET_LANGUAGE_FAIL } from './actions';
+import { GET_LANGUAGE_SUC, GET_LANGUAGE_FAIL, UPDATE_LANGUAGE_SUC,UPDATE_LANGUAGE_FAIL } from './actions';
 
-const initialState = {languagePortfolio:[],languagePortfolioIsError:false}
+const initialState = {languagePortfolio:[],languagePortfolioIsError:false, updateError:false}
 export const protfolioReducer=(state = initialState, action)=>{
     switch(action.type){
         case GET_LANGUAGE_SUC:{
             return(
                 {
                     languagePortfolio:action.payload,
-                    languagePortfolioIsError: state.languagePortfolioIsError
+                    languagePortfolioIsError: false,
+                    updateError: state.updateError
                 }
             );
         }
@@ -15,7 +16,26 @@ export const protfolioReducer=(state = initialState, action)=>{
             return(
                 { 
                     languagePortfolio: state.languagePortfolio,
-                    languagePortfolioIsError: action.payload
+                    languagePortfolioIsError: action.payload,
+                    updateError: state.updateError
+                }
+            );
+        }
+        case UPDATE_LANGUAGE_FAIL:{
+            return(
+                { 
+                    languagePortfolio: state.languagePortfolio,
+                    languagePortfolioIsError: state.languagePortfolioIsError,
+                    updateError: action.payload
+                }
+            );
+        }
+        case UPDATE_LANGUAGE_SUC:{
+            return(
+                { 
+                    languagePortfolio: action.payload,
+                    languagePortfolioIsError: state.languagePortfolioIsError,
+                    updateError: false
                 }
             );
         }
@@ -23,7 +43,8 @@ export const protfolioReducer=(state = initialState, action)=>{
             return(
                 {
                     languagePortfolio: state.languagePortfolio,
-                    languagePortfolioIsError: state.languagePortfolioIsError
+                    languagePortfolioIsError: state.languagePortfolioIsError,
+                    updateError:state.updateError
                 }
             );
         }

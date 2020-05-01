@@ -13,6 +13,8 @@ export const ListDisplayer = (props) =>{
                     from={element.duration.from}
                     to={element.duration.to}
                     key={index}
+                    id={element.id}
+                    update={props.updateItem}
                 />
             );
         })

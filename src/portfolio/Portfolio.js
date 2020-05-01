@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import './portfolio.css';
 import { ListDisplayer } from './listDisplayer/ListDisplayer';
 import { getPortfolioTools } from '../client/client';
-import { getPortfolioLanguage, getPortfolioLanguageFail } from './actions';
+import { getPortfolioLanguage, getPortfolioLanguageFail, updatePortfolioLanguageRequest } from './actions';
 import { ErrorHandler } from '../errorHandler/ErrorHandler';
 
 class Portfolio extends React.Component{
@@ -30,7 +30,12 @@ class Portfolio extends React.Component{
            return <ErrorHandler error="There was an error in the get portfolio languages !"/>;
         }
         else {
-            return <ListDisplayer languagePortfolio={this.props.portfolioLanguage}/>;
+            return(
+                <ListDisplayer 
+                    languagePortfolio={this.props.portfolioLanguage} 
+                    updateItem={this.props.updateLanguagePortfolio}
+                />
+            );
         }
     }
 
@@ -55,8 +60,9 @@ class Portfolio extends React.Component{
 }
 
 const mapActionToProps = {
-    getPortfolioLaguage:getPortfolioLanguage,
-    getPortfolioLanguageFail:getPortfolioLanguageFail
+    getPortfolioLaguage: getPortfolioLanguage,
+    getPortfolioLanguageFail: getPortfolioLanguageFail,
+    updateLanguagePortfolio: updatePortfolioLanguageRequest
 };
 
 const mapStateToProps = (state) => {
