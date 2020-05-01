@@ -1,8 +1,20 @@
 import React from 'react';
-import './contact.css'
+import GoogleMapReact from 'google-map-react';
 
-export const Contact = function(){
+import './contact.css';
+
+export const Contact = () => {
     return(
-        <p className="contactPageStyle">Hello Contact</p>
+        <div className="contactPageStyle">
+            <GoogleMapReact
+                bootstrapURLKeys={{ key: "AIzaSyAyesbQMyKVVbBgKVi2g6VX7mop2z96jBo" }}
+                defaultCenter={{
+                    lat: 59.95,
+                    lng: 30.33
+                  }}
+                defaultZoom={11}
+            />
+            
+        </div>
     );
 }
