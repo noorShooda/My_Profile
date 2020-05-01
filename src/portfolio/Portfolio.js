@@ -60,9 +60,9 @@ class Portfolio extends React.Component{
 }
 
 const mapActionToProps = {
-    getPortfolioLaguage:getPortfolioLanguage,
-    getPortfolioLanguageFail:getPortfolioLanguageFail,
-    updateLanguagePortfolio:updatePortfolioLanguageRequest
+    getPortfolioLaguage: getPortfolioLanguage,
+    getPortfolioLanguageFail: getPortfolioLanguageFail,
+    updateLanguagePortfolio: updatePortfolioLanguageRequest
 };
 
 const mapStateToProps = (state) => {

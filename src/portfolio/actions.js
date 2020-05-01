@@ -1,9 +1,9 @@
-export const GET_LANGUAGE ="getPortfolioLanguage";
-export const GET_LANGUAGE_FAIL="getPortfolioLanguageFail";
-export const GET_LANGUAGE_SUC="getPortfolioLanguageSuccess";
-export const UPDATE_LANGUAGE_FAIL="updatePortfolioLanguageFail";
-export const UPDATE_LANGUAGE_REQUEST="updatePortfolioLanguageRequest";
-export const UPDATE_LANGUAGE_SUC="updatePortfolioLanguageSuccess";
+export const GET_LANGUAGE = "getPortfolioLanguage";
+export const GET_LANGUAGE_FAIL = "getPortfolioLanguageFail";
+export const GET_LANGUAGE_SUC = "getPortfolioLanguageSuccess";
+export const UPDATE_LANGUAGE_FAIL = "updatePortfolioLanguageFail";
+export const UPDATE_LANGUAGE_REQUEST = "updatePortfolioLanguageRequest";
+export const UPDATE_LANGUAGE_SUC = "updatePortfolioLanguageSuccess";
 
 export const getPortfolioLanguage = () => {
     return(
@@ -31,7 +31,7 @@ export const getPortfolioLanguageSuccess = (data) => {
     );
 };
 
-export const updatePortfolioLanguageRequest = (id,data) =>{
+export const updatePortfolioLanguageRequest = (id, data) => {
     return(
         {
             type: UPDATE_LANGUAGE_REQUEST,
@@ -43,7 +43,7 @@ export const updatePortfolioLanguageRequest = (id,data) =>{
     )
 };
 
-export const updatePortfolioLanguageSuccess = (data) =>{
+export const updatePortfolioLanguageSuccess = (data) => {
     return(
         {
             type: UPDATE_LANGUAGE_SUC,
@@ -52,7 +52,7 @@ export const updatePortfolioLanguageSuccess = (data) =>{
     )
 };
 
-export const updatePortfolioLanguageFail = (error) =>{
+export const updatePortfolioLanguageFail = (error) => {
     return(
         {
             type: UPDATE_LANGUAGE_FAIL,

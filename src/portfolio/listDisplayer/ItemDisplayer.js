@@ -31,7 +31,7 @@ class ItemDisplayer extends React.Component {
         this.setState({showPopupSwitcher:false});
     }
 
-    render(){
+    render() {
         return(
             <div className="itemStyle">
                 <p><span className="subtitle">language</span> : {this.props.language}</p>
