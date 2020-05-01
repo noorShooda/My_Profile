@@ -14,3 +14,8 @@
     font-family: sans-serif;
     color: #D2DED6;
 }
+.editButtonParentStyle{
+    display: flex;
+    justify-content: flex-end;
+    margin: 5px
+}
