@@ -1,9 +1,9 @@
-import { GET_LANGUAGE, GET_LANGUAGE_FAIL } from './actions';
+import { GET_LANGUAGE_SUC, GET_LANGUAGE_FAIL } from './actions';
 
 const initialState = {languagePortfolio:[],languagePortfolioIsError:false}
 export const protfolioReducer=(state = initialState, action)=>{
     switch(action.type){
-        case GET_LANGUAGE:{
+        case GET_LANGUAGE_SUC:{
             return(
                 {
                     languagePortfolio:action.payload,
