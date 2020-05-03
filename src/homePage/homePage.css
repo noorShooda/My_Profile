@@ -1,7 +1,8 @@
 .homePageStyle{
     position: relative;
-    top:0px;
+    top:10px;
     bottom:0px;
-    left:300px;
+    left:210px;
     
+    width: 350px;
 }

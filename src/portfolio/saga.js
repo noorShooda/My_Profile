@@ -1,4 +1,4 @@
-import { takeLatest, call, put, fork, all } from 'redux-saga/effects';
+import { takeLatest, call, put } from 'redux-saga/effects';
 
 import { getLanguagePortfolio ,updatePrtfolioLanguages } from '../client/client';
 import { GET_LANGUAGE, getPortfolioLanguageSuccess, getPortfolioLanguageFail, updatePortfolioLanguageSuccess, updatePortfolioLanguageFail,UPDATE_LANGUAGE_REQUEST } from './actions';
@@ -12,7 +12,7 @@ function * getPortfolioLanguage() {
     }
 }
 
-function * getPortfolioLanguageListner() {
+export function * getPortfolioLanguageListner() {
     yield takeLatest(GET_LANGUAGE, getPortfolioLanguage);
 }
 
@@ -26,16 +26,9 @@ function * updateLanguagePortfolio(action) {
     }
 }
 
-function * updateLanguagePortfolioListner() {
+export function * updateLanguagePortfolioListner() {
     yield takeLatest(UPDATE_LANGUAGE_REQUEST, updateLanguagePortfolio)
 }
 
-function * rootSaga() {
-    yield all(
-        [
-            fork(getPortfolioLanguageListner),
-            fork(updateLanguagePortfolioListner)
-        ]
-    )
-}
-export default rootSaga;
+
+

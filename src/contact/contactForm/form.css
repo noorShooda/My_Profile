@@ -1,0 +1,11 @@
+.formStyle{ 
+    float: left;
+    padding: 10px;
+
+    width: 400px;
+    height: 675px;
+
+    background-color:#5CC8B3 !important;
+
+    font-family: sans-serif;
+}

@@ -37,5 +37,26 @@
             }
         }
     ],
-    "portfolioTools":["powerBI","netbeans","adobe photoshop","SSIS","SSRS"]
+    "portfolioTools":["powerBI","netbeans","adobe photoshop","SSIS","SSRS"],
+    "studiesPaths":[
+        {
+            "school":"ESPRIT",
+            "major": "computer science",
+            "diploma": "engineering",
+            "duration":{
+                "from":2015,
+                "to":2019
+            }
+        },
+            {
+                "school":"ISIMG",
+                "major": "computer science",
+                "diploma": "bachelor",
+                "duration":{
+                    "from":2012,
+                    "to":2015
+                }
+            }
+        
+    ]
 }
